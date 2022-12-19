@@ -82,3 +82,32 @@ function Modal(){
 }
 
 ```
+
+## map을 이용한 반복문
+
+* JSX 안에서 for을 사용할 수 없어서 HTML을 반복하고 싶으면 map을 사용
+* map에서 return할 때마다 그 값은 배열에 하나씩 저장되고 map 함수가 끝나면 해당 배열을 리턴하는데 JSX는 중괄호 안에 배열이 있으면 배열의 원소를 하나씩 꺼내서 HTML로 출력해준다.
+* map 반복문으로 생성한 html에 key={key} 속성을 추가해야한다. (React가 태그를 구분할 수 있게 하기 위함)
+
+
+
+
+``` typescript
+
+function App(){
+  let arr = ['data1', 'data2', 'data3'];
+  return (
+    <div className='App'>
+      {
+        arr.map((value, index)=>{
+          return (
+            <div key={index}>{value}</div>
+          );
+        })
+      }
+    </div>
+   
+  );
+}
+
+```
