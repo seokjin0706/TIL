@@ -53,3 +53,32 @@ function App() {
 <div style={{color:'blue', fontSize:'30px'}}>value</div>      
 ```
 
+## 삼항 연산자
+
+* JSX HTML 내부에서 if문을 사용할 수 없다  
+* 조건부로 HTML을 보여주고 싶을 때는 삼항 연산자를 사용할 수 있다.
+
+``` typescript
+
+function App() {
+  let [modal, setModal] = useState(false);
+  return (
+    <div className="App">
+      {
+        modal === true ? <Modal/> : null
+      }
+    </div>
+  );
+}
+
+function Modal(){
+  return (
+    <div className="modal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  )
+}
+
+```
