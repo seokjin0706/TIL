@@ -1,4 +1,4 @@
-# export와 export default의 차이
+# export, export default, export type의 차이
 
 ## export default
 * 해당 모듈엔 하나의 개체(변수, 클래스, 함수 등)만 있다는 의미로 받아들여진다.
@@ -28,4 +28,22 @@ export {data};
 [App.tsx]
 ``` typescript
 import {data} from "./data";
+```
+
+## export type
+* type, interface를 export할 때 사용한다.
+
+[data.ts]
+``` typescript
+interface Data{
+    id: number,
+    title: string;
+    content : string,
+    price : number
+}
+export type {Data};
+```
+[App.tsx]
+``` typescript
+import {Data} from "./data";
 ```
