@@ -86,3 +86,12 @@ function About(){
 }
 
 ```
+
+## URL 파라미터 사용하기 (useParams)
+``` typescript
+<Route path="/detail/:id" element={ <Detail shoes={shoes}/> }/>
+
+import { useParams } from 'react-router-dom';
+
+let {id} = useParams();
+```
