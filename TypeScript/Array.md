@@ -21,5 +21,20 @@ arr.unshift(10);
 arr.splice(3,1); // index 3의 원소 1개 제거
 ```
 
+# Array 정렬
+
+[sort]
+
+``` typescript
+
+let numbers = [1, 10, 4, 5, 7, 2, 3];
+numbers.sort((a, b)=>{
+if(a > b) return 1;  // b가 a 앞에 온다.
+if(a < b) return -1; // a가 b 앞에 온다.
+return 0;     // a, b 정렬 유지
+})
+console.log(numbers);
+
+```
 
 
