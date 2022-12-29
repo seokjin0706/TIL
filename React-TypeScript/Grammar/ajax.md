@@ -12,15 +12,32 @@ AJAX를 위한 외부 라이브러리
 ## get 요청
 
 ``` typescript
-<button onClick={()=>{
-    axios.get('url')
-    .then((result)=>{
-        console.log(result);
-        console.log(result.data);
-    })
-    .catch(()=>{
-        console.log('요청 실패');
-    })
-}}>요청</button>
+axios.get('url')
+.then((result)=>{
+    console.log(result);
+    console.log(result.data);
+})
+.catch(()=>{
+    console.log('요청 실패');
+})
 
+```
+
+## post 요청
+
+``` typescript
+
+axios.post('url', {key : 'value'})
+.then()
+.catch()
+
+```
+
+## 동시에 여러 개의 AJAX 요청 보내기
+
+``` typescript
+
+Promise.all( [axios.get('URL1'), axios.get('URL2')] )\
+.then()
+.catch()
 ```
