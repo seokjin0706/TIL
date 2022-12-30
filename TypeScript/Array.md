@@ -37,4 +37,21 @@ console.log(numbers);
 
 ```
 
+# Array 특정 원소 찾기
+[find]
 
+원소가 배열 안에 있으면 해당 값을 리턴, 없으면 undefined
+```typescript
+let numbers = [1, 10, 4, 5, 7, 2, 3];
+number.find((n)=>n === 10)  //10
+```
+
+[findIndex]
+
+원소가 배열 안에 있으면 해당 원소의 index 리턴, 없으면 -1 리턴
+
+``` typescript
+let numbers = [1, 10, 4, 5, 7, 2, 3];
+number.findIndex((n)=>n === 10)  //1
+
+```
